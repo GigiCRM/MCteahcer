@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="adminHome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Teacher-Home</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+                    <div class="sidebar-brand-text mx-3"><span>Teacher</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="questionBankManagement.html"><i class="fas fa-tachometer-alt"></i><span>Question Bank Management</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="assignment.html"><i class="fas fa-user"></i><span>Assignment</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="test.html"><i class="fas fa-table"></i><span>Test/Exam</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="result.html"><i class="fas fa-table"></i><span>Result</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="accountManagement.html"><i class="fas fa-table"></i><span>Account Management</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="classManagement.html"><i class="fas fa-table"></i><span>Class Management</span></a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+
+                            <li style="padding-right: 20px; text-decoration: none;">
+                                <a style="text-decoration: none; color: grey;" href="login.html">Logout</a>
+                            </li>
+
+                            <li>
+                                <a style="text-decoration: none; color: grey;" href="register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="card shadow-lg o-hidden border-0 my-5">
+                        <div class="card-body p-0">
+                            <div class="row">
+
+                                <div class="container-fluid">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4">Assignment</h4>
+                                    </div>
+
+                                    <p> Please enter "a", "b", "c", "d" or "e" to choose the correct answer.</p>
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput" type="text">
+                                        <button onclick="myFunction()">Submit</button>
+                                        <div id="answer" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction() {
+                                                var letter = document.getElementById("myInput").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput2" type="text">
+                                        <button onclick="myFunction2()">Submit</button>
+                                        <div id="answer2" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction2() {
+                                                var letter = document.getElementById("myInput2").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer2").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput3" type="text">
+                                        <button onclick="myFunction3()">Submit</button>
+                                        <div id="answer3" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction3() {
+                                                var letter = document.getElementById("myInput3").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer3").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput4" type="text">
+                                        <button onclick="myFunction4()">Submit</button>
+                                        <div id="answer4" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction4() {
+                                                var letter = document.getElementById("myInput4").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer4").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput5" type="text">
+                                        <button onclick="myFunction5()">Submit</button>
+                                        <div id="answer5" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction5() {
+                                                var letter = document.getElementById("myInput5").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer5").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput6" type="text">
+                                        <button onclick="myFunction6()">Submit</button>
+                                        <div id="answer6" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction6() {
+                                                var letter = document.getElementById("myInput6").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer6").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div id="question">
+
+                                        <div>This is Question1. Please select the correct answer.</div>
+                                        <div>A. Option A</div>
+                                        <div>B. Option B</div>
+                                        <div>C. Option C</div>
+                                        <div>D. Option D</div>
+                                        <div>E. Option E</div>
+
+                                        <input id="myInput7" type="text">
+                                        <button onclick="myFunction7()">Submit</button>
+                                        <div id="answer7" style="color: red;"></div>
+
+                                        <script>
+                                            function myFunction7() {
+                                                var letter = document.getElementById("myInput7").value;
+                                                var text;
+
+                                                if (letter === "a") {
+                                                    text = "Correct!";
+                                                } else {
+                                                    text = "Wrong! The answer is A";
+                                                }
+
+                                                document.getElementById("answer7").innerHTML = text;
+                                            }
+                                        </script>
+                                    </div>
+
+                                    <div class="col text-center">
+                                        <a href="assignment.html" class="btn btn-info" style="margin-top:25px;color:white; margin-bottom:20px;">DONE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="adminHome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Teacher-Assignment</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+                    <div class="sidebar-brand-text mx-3"><span>Teacher</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="questionBankManagement.html"><i class="fas fa-tachometer-alt"></i><span>Question Bank Management</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="assignment.html"><i class="fas fa-user"></i><span>Assignment</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="test.html"><i class="fas fa-table"></i><span>Test/Exam</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="result.html"><i class="fas fa-table"></i><span>Result</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="accountManagement.html"><i class="fas fa-table"></i><span>Account Management</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="classManagement.html"><i class="fas fa-table"></i><span>Class Management</span></a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+
+                            <li style="padding-right: 20px; text-decoration: none;">
+                                <a style="text-decoration: none; color: grey;" href="login.html">Logout</a>
+                            </li>
+
+                            <li>
+                                <a style="text-decoration: none; color: grey;" href="register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+
+                    <div class="d-flex flex-column" id="content-wrapper">
+                        <div id="content">
+
+                            <div class="container-fluid">
+                                <h3 class="text-dark mb-4">Test Result Viewing</h3>
+                                <div class="row mb-3">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="card shadow mb-3">
+                                                <div class="card-header py-3">
+                                                    <p class="text-primary m-0 fw-bold"></p>
+
+
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6 text-nowrap">
+
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="text-md-end dataTables_filter" id="dataTable_filter">
+                                                                <form action="{{ route('admin.searchUser') }}" method="post" id="search">
+                                                                    <label class="form-label"><input type="search" name="searchUser" id="searchUser" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label>
+                                                                    <a href="testResult.html" class="btn btn-info" style="color:white;">SEARCH</a>
+                                                                </form>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <form class="subform" method="post" action="{{ route('admin.storeSubject') }}" enctype="multipart/form-data">
+
+                                                    <table class="table my-0" id="dataTable">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <th>Class</th>
+                                                                <th>Start Date</th>
+                                                                <th>End Date</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+
+                                                            <tr id="topic">
+                                                                <td>Test 1</td>
+                                                                <td>Class A</td>
+                                                                <td>10/10/2021</td>
+                                                                <td>11/10/2021</td>
+                                                                <td>
+                                                                    <a href="viewTestResult.html" class="btn btn-secondary">View Result</a>
+                                                                    <a href="viewTestSubmittedList.html" class="btn btn-secondary">Submitted List</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr id="topic">
+                                                                <td>Test 1</td>
+                                                                <td>Class B</td>
+                                                                <td>10/10/2021</td>
+                                                                <td>11/10/2021</td>
+                                                                <td>
+                                                                    <a href="viewTestResult.html" class="btn btn-secondary">View Result</a>
+                                                                    <a href="viewTestSubmittedList.html" class="btn btn-secondary">Submitted List</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr id="topic">
+                                                                <td>Test 1</td>
+                                                                <td>Class C</td>
+                                                                <td>10/10/2021</td>
+                                                                <td>11/10/2021</td>
+                                                                <td>
+                                                                    <a href="viewTestResult.html" class="btn btn-secondary">View Result</a>
+                                                                    <a href="viewTestSubmittedList.html" class="btn btn-secondary">Submitted List</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr id="topic">
+                                                                <td>Test 2</td>
+                                                                <td>Class A</td>
+                                                                <td>10/10/2021</td>
+                                                                <td>11/10/2021</td>
+                                                                <td>
+                                                                    <a href="viewTestResult.html" class="btn btn-secondary">View Result</a>
+                                                                    <a href="viewTestSubmittedList.html" class="btn btn-secondary">Submitted List</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr id="topic">
+                                                                <td>Test 2</td>
+                                                                <td>Class B</td>
+                                                                <td>10/10/2021</td>
+                                                                <td>11/10/2021</td>
+                                                                <td>
+                                                                    <a href="viewTestResult.html" class="btn btn-secondary">View Result</a>
+                                                                    <a href="viewTestSubmittedList.html" class="btn btn-secondary">Submitted List</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="topic">
+                                                                <td>Test 2</td>
+                                                                <td>Class C</td>
+                                                                <td>10/10/2021</td>
+                                                                <td>11/10/2021</td>
+                                                                <td>
+                                                                    <a href="viewTestResult.html" class="btn btn-secondary">View Result</a>
+                                                                    <a href="viewTestSubmittedList.html" class="btn btn-secondary">Submitted List</a>
+                                                                </td>
+                                                            </tr>
+
+
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                    <div class="row mb-3">
+
+                                                    </div>
+
+                                                    <div class="col text-center">
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <footer class="bg-white sticky-footer">
+        <div class="container my-auto">
+            <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
